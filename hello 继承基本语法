@@ -1,0 +1,34 @@
+#pragma once
+#include <iostream>
+using namespace std;
+
+class BasePage {
+public:
+	void header() {
+		cout << "公共的头部" << endl;
+
+	}
+	void footer() {
+		cout << "公共的尾部" << endl;
+
+	}
+	void leftlist() {
+		cout << "公共的左部列表" << endl;
+	};
+	
+};
+class News : public BasePage {
+public:
+	void content() {
+		cout << "news" << endl;
+	}
+};
+
+
+
+int main()
+{
+    
+    std::cout << "Hello World!\n";
+    return EXIT_SUCCESS;
+}

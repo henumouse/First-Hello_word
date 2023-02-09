@@ -40,6 +40,14 @@ class Cat :public Animal {
 			cout <<this->m_Name<< "cat speak" << endl;
 		}
 };
+//如果子类中有指向堆区的属性，那么要利用虚析构技术在delete的时候调用子类的析构函娄l /virtual ~Animal (
+/ / {
+// lcout << "Animal的析构函数调用”<< endl;/ /}
+//纯虚析构需要有声明也需要有实现
+//eg；类内 virtual ~Animal()=0;
+//类外 Animal：：Animal（）{
+//	cout.....
+//}
 void test01() {
 	Animal* cat = new Cat("TOM");
 	cat->speak();

@@ -3,11 +3,17 @@
 #include <iostream>
 using namespace std;
 
-
-int myDivision(int a, int b) {
+class MyException {
+	public:
+		void printError() {
+			cout << "我自己的异常" << endl;
+		}
+};
+int myDivision(int a, int b) { 
 	if (b==0)
 	{
 		//return -1;
+		//throw MyException();自定义异常
 		throw - 1;//int类型异常
 	}
 	return a / b;
@@ -41,3 +47,4 @@ int main()
 	test01();
     return EXIT_SUCCESS;
 }
+

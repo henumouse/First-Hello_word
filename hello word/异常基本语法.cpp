@@ -24,6 +24,9 @@ void test01() {
 	{
 		cout << "int类型异常捕获" << endl;
 	}
+	catch (...) {
+		cout << "其他类型异常捕获" << endl;
+	}
 	//c下处理异常有缺陷，返回值不统一，若值为-1无法区分是结果还是异常
 	/*int ret = myDivision(a, b);
 	if (ret==-1)
